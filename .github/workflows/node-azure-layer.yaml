@@ -112,6 +112,6 @@ jobs:
 
       - name: setup Readme
         run: |
-          sed 's/TBD_APP_LINK/${{ github.event.inputs.AZURE_APP_SERVICE_NAME }}.azurewebsites.net/g' .github/workflows/app-readme.md
-          mv .github/workflows/app-readme.md readme.md
+          sed 's/TBD_APP_LINK/${{ github.event.inputs.AZURE_APP_SERVICE_NAME }}.azurewebsites.net/g' .github/app-readme.md
+          mv .github/app-readme.md readme.md
           
