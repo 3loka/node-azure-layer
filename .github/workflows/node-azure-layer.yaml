@@ -11,11 +11,11 @@ permissions:
    contents: write
 
 jobs:
-  stack-initialization:
+ initialization:
     runs-on: ubuntu-latest
-    environment:
-       name: development
-       url: ${{ steps.get-url.outputs.your_site }}
+#     environment:
+#        name: development
+#        url: ${{ steps.get-url.outputs.your_site }}
     steps:
       - run: echo "Creating and deploying a nodejs site to azure app service"       
       - name: checkout
