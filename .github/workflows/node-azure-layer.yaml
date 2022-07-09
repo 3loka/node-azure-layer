@@ -109,3 +109,9 @@ jobs:
           echo "Website is up and running..."
           echo "Browse here: $URL"       
           echo "::set-output name=your_site::$URL"
+
+      - name: setup Readme
+        run: |
+          sed -i 's/TBD_APP_LINK/https://${{ github.event.inputs.AZURE_APP_SERVICE_NAME }}.azurewebsites.net"/g' .github/workflows/app-readme.md
+          mv .github/workflows/app-readme.md readme.md
+          
