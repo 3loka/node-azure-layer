@@ -6,3 +6,4 @@ configuration:
   apps: ["azure-oidc"]
   extensions: ["gh-azure-oidc"]
   workflow: "node-azure-layer.yaml"
+  ouptut-file: "readme.md"
