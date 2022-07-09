@@ -1,16 +1,8 @@
 version: v1
 type: layer
-name: Service
+name: Deploys a Node app on Azure
 configuration:
-  topics: ["java", "test"]
+  topics: ["node", "azure"]
   apps: ["azure-oidc"]
   extensions: ["gh-azure-oidc"]
-  workflow: "hello-world-input.yaml"
-secrets:
-  secret1:
-    description: desc
-    required: yes
-#     environment: test
-  secret2:
-    description: desc
-    required: yes
+  workflow: "node-azure-layer.yaml"
