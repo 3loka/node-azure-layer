@@ -110,6 +110,11 @@ jobs:
           echo "Browse here: $URL"       
           echo "::set-output name=your_site::$URL"
 
+      - name: checkout
+        uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+          
       - name: setup Readme
         run: |
           sed 's/TBD_APP_LINK/${{ github.event.inputs.AZURE_APP_SERVICE_NAME }}.azurewebsites.net/g' .github/app-readme.md > .github/app-readme.md
